@@ -31,6 +31,10 @@ public class MovieRequest {
 
     private String posterUrl;
 
+    private String backdropUrl;
+
+    private Double rating;
+
     private String trailerUrl;
 
     @NotNull(message = "Certificate is required")

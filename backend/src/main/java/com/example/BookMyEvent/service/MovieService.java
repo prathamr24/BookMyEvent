@@ -54,6 +54,11 @@ public class MovieService {
                 .certificate(
                         request.getCertificate()
                 )
+                .backdropUrl(
+                        request.getBackdropUrl()
+                ).rating(
+                        request.getRating()
+                )
                 .build();
 
         Movie savedMovie =
@@ -80,6 +85,8 @@ public class MovieService {
                 )
                 .posterUrl(movie.getPosterUrl())
                 .trailerUrl(movie.getTrailerUrl())
+                .backdropUrl(movie.getBackdropUrl())
+                .rating(movie.getRating())
                 .certificate(
                         movie.getCertificate()
                 )

@@ -243,4 +243,17 @@ public class ShowService {
                 )
                 .build();
     }
+
+
+
+    public List<ShowResponse> getShowsByMovieId(
+            Long movieId
+    ) {
+
+        return showRepository
+                .findByMovieId(movieId)
+                .stream()
+                .map(this::mapToResponse)
+                .toList();
+    }
 }

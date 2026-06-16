@@ -1,6 +1,7 @@
 package com.example.BookMyEvent.controller;
 
 import com.example.BookMyEvent.dto.request.ShowRequest;
+import com.example.BookMyEvent.dto.response.MovieResponse;
 import com.example.BookMyEvent.dto.response.ShowResponse;
 import com.example.BookMyEvent.dto.response.ShowSeatResponse;
 import com.example.BookMyEvent.service.ShowService;
@@ -42,5 +43,15 @@ public class ShowController {
         return showService.getShowSeats(
                 showId
         );
+    }
+
+    @GetMapping("/movie/{movieId}")
+    @PreAuthorize(
+            "hasAnyRole('ADMIN','CUSTOMER','ORGANIZER')"
+    )
+    public List<ShowResponse> getShowsByMovieId(
+            @PathVariable Long movieId
+    ){
+        return showService.getShowsByMovieId(movieId);
     }
 }

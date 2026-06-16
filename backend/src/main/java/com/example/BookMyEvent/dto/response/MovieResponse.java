@@ -27,6 +27,10 @@ public class MovieResponse {
 
     private String posterUrl;
 
+    private String backdropUrl;
+
+    private Double rating;
+
     private String trailerUrl;
 
     private Certificate certificate;

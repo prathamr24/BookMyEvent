@@ -61,6 +61,10 @@ public class Movie extends BaseEntity {
 
     private String posterUrl;
 
+    private String backdropUrl;
+
+    private Double rating;
+
     private String trailerUrl;
 
     @Enumerated(EnumType.STRING)
